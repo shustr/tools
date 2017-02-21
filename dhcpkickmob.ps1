@@ -1,5 +1,5 @@
 # Ver. 0.3
-# Author: alex.gaydukov@gmail.com
+# Author: dvoalex@gmail.com
 # Date: 24/04/2016
 # Description: gets list of "iphone" and "android" devices from DHCP scope 192.168.2.0 and kick these devices off from DHCP scope lease.
 
