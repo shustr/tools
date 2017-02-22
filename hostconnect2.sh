@@ -4,7 +4,9 @@
 # 
 
 #
-hostlistfile="hostlist.txt"
+echo "type name of the file with list of servers.."
+echo -en '\n'
+read hostlistfile 
 srvqty=$(wc -l $hostlistfile | cut -f1 -d" ")
 echo "File with list of your servers: $hostlistfile"
 echo -en '\n'
@@ -18,8 +20,8 @@ select option in $FOUNDHOSTS "Quit"
 
 do
 
-	#
-# ALl magic about to happen in here, but it's not quite done yet...
+#
+# All magic about to happen in here, but it's not quite done yet...
 #
 
 done
