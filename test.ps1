@@ -1,4 +1,5 @@
-$SourceFilePath = "\\Personal\Shome$\GaydukoA\scriptTests\test\test.txt"
+$SourceFilePath = "C\:test.txt" # file contains output of "net use" command
+
 #greps (at least supposed to) column for Disk name
 $SourceFileContentDisk = Get-Content $SourceFilePath | findstr "\\" | %{ $_.Split(':')[0]; }
 $SourceFileContentDisk.Trim() | %{ $_.Split('\s')[0]; }
