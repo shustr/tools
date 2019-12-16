@@ -1,0 +1,14 @@
+#!/bin/bash
+# bulkping
+date
+# takings IP addresses from the file.txt
+grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' file.txt > iplist.txt
+cat iplist.txt |  while read output
+do
+ ping -c 1 "$output" > /dev/null
+     if [ $? -eq 0 ]; then
+     echo "$output is up"
+     else
+     echo "$output is down"
+     fi
+done
